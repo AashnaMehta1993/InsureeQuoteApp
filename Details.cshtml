@@ -1,0 +1,22 @@
+@model InsureeQuoteApp.Models.Insuree
+
+<h2>Insuree Details</h2>
+
+<div>
+    <p><strong>First Name:</strong> @Model.FirstName</p>
+    <p><strong>Last Name:</strong> @Model.LastName</p>
+    <p><strong>Email:</strong> @Model.EmailAddress</p>
+    <p><strong>Date of Birth:</strong> @Model.DateOfBirth.ToShortDateString()</p>
+    <p><strong>Car Year:</strong> @Model.CarYear</p>
+    <p><strong>Car Make:</strong> @Model.CarMake</p>
+    <p><strong>Car Model:</strong> @Model.CarModel</p>
+    <p><strong>Speeding Tickets:</strong> @Model.SpeedingTickets</p>
+    <p><strong>DUI:</strong> @(Model.DUI ? "Yes" : "No")</p>
+    <p><strong>Coverage Type:</strong> @Model.CoverageType</p>
+    <p><strong>Quote ($):</strong> @Model.Quote</p>
+</div>
+
+<p>
+    <a href="@Url.Action("Edit", "Insuree", new { id = Model.Id })">Edit</a> |
+    <a href="@Url.Action("Index", "Insuree")">Back to List</a>
+</p>

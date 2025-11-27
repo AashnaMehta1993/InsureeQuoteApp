@@ -1,0 +1,68 @@
+@model InsureeQuoteApp.Models.Insuree
+
+<h2>Create New Insuree</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+
+        <div>
+            @Html.LabelFor(m => m.FirstName)
+            @Html.EditorFor(m => m.FirstName)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.LastName)
+            @Html.EditorFor(m => m.LastName)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.EmailAddress)
+            @Html.EditorFor(m => m.EmailAddress)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.DateOfBirth)
+            @Html.EditorFor(m => m.DateOfBirth)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.CarYear)
+            @Html.EditorFor(m => m.CarYear)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.CarMake)
+            @Html.EditorFor(m => m.CarMake)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.CarModel)
+            @Html.EditorFor(m => m.CarModel)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.SpeedingTickets)
+            @Html.EditorFor(m => m.SpeedingTickets)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.DUI)
+            @Html.EditorFor(m => m.DUI)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.CoverageType)
+            @Html.EditorFor(m => m.CoverageType)
+        </div>
+
+        @Html.HiddenFor(m => m.Quote)
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+}
